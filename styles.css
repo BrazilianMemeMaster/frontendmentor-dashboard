@@ -1,0 +1,419 @@
+body {
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.daily {
+    display: flex;
+    position: absolute;
+}
+
+.weekly {
+    display: none;
+    position: absolute;
+}
+
+.monthly {
+    display: none;
+    position: absolute;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 20px;
+}
+
+#personCard {
+    grid-row: 1 / span 2;
+    background-color: hsl(235, 46%, 20%);
+}
+
+.info {
+    background-color: hsl(246, 80%, 60%);
+    display: flex;
+}
+
+#profilePic {
+    width: 10%;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+#reportFor {
+    font-size: 0.75em;
+    color: hsl(236, 100%, 87%);
+}
+
+#name {
+    font-size: 1.75em;
+    font-weight: 300;
+    margin-right: 1em;
+}
+
+@media (max-width: 480px) {
+    .container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        margin-bottom: 50px
+    }
+    #personCard {
+        grid-row: 1 / span 2;
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 15px;
+    }
+    #profilePic {
+        width: 20%;
+        border: 2px solid white;
+        border-radius: 50%;
+        margin-left: 20px;
+    }
+    .info {
+        background-color: hsl(246, 80%, 60%);
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        height: 120px;
+    }
+    #name {
+        font-size: 1.2em;
+        font-weight: 300;
+        margin-right: 1em;
+    }
+    .text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px 0 20px 20px;
+    }
+    .dayOptions {
+        display: flex;
+        font-size: 1em;
+        font-weight: 400;
+        color: hsl(235, 45%, 61%);
+        justify-content: space-between;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+    #daily:hover {
+        color: white;
+        cursor: pointer;
+    }
+    #weekly:hover {
+        color: white;
+        cursor: pointer;
+    }
+    #monthly:hover {
+        color: white;
+        cursor: pointer;
+    }
+    .active {
+        color: white;
+    }
+    .work-card {
+        background-color: hsl(15, 100%, 70%);
+        height: 100px;
+        background-image: url(/images/icon-work.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .play-card {
+        background-color: hsl(195, 74%, 62%);
+        height: 100px;
+        background-image: url(/images/icon-play.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .study-card {
+        background-color: hsl(348, 100%, 68%);
+        height: 100px;
+        background-image: url(/images/icon-study.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .exercise-card {
+        background-color: hsl(145, 58%, 55%);
+        height: 100px;
+        background-image: url(/images/icon-exercise.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .social-card {
+        background-color: hsl(264, 64%, 52%);
+        height: 100px;
+        background-image: url(/images/icon-social.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .selfcare-card {
+        background-color: hsl(43, 84%, 65%);
+        height: 100px;
+        background-image: url(/images/icon-self-care.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .title {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px 8px 20px;
+    }
+    .daily {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        position: absolute;
+    }
+    .monthly {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        position: absolute;
+    }
+    .weekly {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        padding: 0 20px;
+    }
+    .previous {
+        font-size: 0.75em;
+        margin-left: 85px;
+        color: hsl(236, 100%, 87%);
+        word-break: break-word;
+        padding-right: 5px;
+    }
+    .current {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+    .card-body {
+        background-color: hsl(235, 46%, 20%);
+        height: 105px;
+        margin-top: 40px;
+        border-radius: 15px;
+    }
+    .card-body:hover {
+        background-color: hsl(235, 29%, 44%);
+        height: 105px;
+        margin-top: 40px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    .active-info {
+        display: flex;
+    }
+}
+
+@media (min-width: 480px) {
+    .container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 190px);
+        grid-template-rows: repeat(2, 190px);
+        margin-top: 50px;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    #personCard {
+        grid-row: 1 / span 2;
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 15px;
+    }
+    .info {
+        background-color: hsl(246, 80%, 60%);
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        border-radius: 15px;
+        height: 275px;
+    }
+    #profilePic {
+        width: 30%;
+        border: 2px solid white;
+        border-radius: 50%;
+        margin-left: 20px;
+        margin-top: 28px;
+        margin-bottom: 15px;
+    }
+    #reportFor {
+        font-size: 0.65em;
+        color: hsl(236, 100%, 87%);
+        margin-bottom: 5px;
+    }
+    #name {
+        font-size: 1.5em;
+        font-weight: 300;
+        margin-right: 1em;
+    }
+    .text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px 0 20px 20px;
+    }
+    .dayOptions {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75em;
+        font-weight: 400;
+        color: hsl(235, 45%, 61%);
+        justify-content: center;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+    #daily {
+        margin-bottom: 2px;
+        margin-top: 20px;
+    }
+    #weekly {
+        margin-bottom: 2px;
+    }
+    #daily:hover {
+        color: white;
+        cursor: pointer;
+    }
+    #weekly:hover {
+        color: white;
+        cursor: pointer;
+    }
+    #monthly:hover {
+        color: white;
+        cursor: pointer;
+    }
+    .active {
+        color: white;
+    }
+    .work-card {
+        background-color: hsl(15, 100%, 70%);
+        height: 100px;
+        background-image: url(/images/icon-work.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .play-card {
+        background-color: hsl(195, 74%, 62%);
+        height: 100px;
+        background-image: url(/images/icon-play.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .study-card {
+        background-color: hsl(348, 100%, 68%);
+        height: 100px;
+        background-image: url(/images/icon-study.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .exercise-card {
+        background-color: hsl(145, 58%, 55%);
+        height: 100px;
+        background-image: url(/images/icon-exercise.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .social-card {
+        background-color: hsl(264, 64%, 52%);
+        height: 100px;
+        background-image: url(/images/icon-social.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .selfcare-card {
+        background-color: hsl(43, 84%, 65%);
+        height: 100px;
+        background-image: url(/images/icon-self-care.svg);
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        background-position: top -10px right 15px;
+        margin-bottom: 45px;
+    }
+    .title {
+        display: flex;
+        font-size: 0.75em;
+        justify-content: space-between;
+        padding: 20px 20px 8px 20px;
+    }
+    span>img {
+        width: 75%;
+    }
+    .daily {
+        display: none;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        position: absolute;
+    }
+    .monthly {
+        display: none;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        position: absolute;
+    }
+    .weekly {
+        display: none;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        padding: 10px 20px;
+    }
+    .previous {
+        display: block;
+        font-size: 0.60em;
+        color: hsl(236, 100%, 87%);
+        padding-right: 5px;
+        font-weight: 400;
+    }
+    .current {
+        font-size: 2.2em;
+        display: block;
+        font-weight: 300;
+        margin-bottom: 7px;
+    }
+    .card-body {
+        background-color: hsl(235, 46%, 20%);
+        height: 150px;
+        margin-top: 40px;
+        border-radius: 15px;
+    }
+    .card-body:hover {
+        background-color: hsl(235, 29%, 44%);
+        cursor: pointer;
+    }
+    .active-info {
+        display: flex;
+    }
+}

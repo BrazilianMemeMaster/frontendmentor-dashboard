@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="personCard">
+            <div class="info">
+                <img id="profilePic" src="/images/image-jeremy.png" alt="">
+                <div class="text">
+                    <span id="reportFor">Report for</span>
+                    <span id="name">Jeremy Robson</span>
+                </div>
+            </div>
+            <div class="dayOptions">
+                <p id="daily">Daily</p>
+                <p id="weekly" class="active">Weekly</p>
+                <p id="monthly">Monthly</p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <div class="card-body">
+                <div class="title">
+                    Work <span><img src="/images/icon-ellipsis.svg" alt=""></span>
+                </div>
+                <div class="daily active-info">
+                    <span class="current">
+         5hrs
+        </span>
+                    <span class="previous">
+          Yesterday - 7hrs
+        </span>
+                </div>
+                <div class="weekly">
+                    <span class="current">
+                32hrs
+              </span>
+                    <span class="previous">
+                Last week - 36hrs
+              </span>
+                </div>
+                <div class="monthly">
+                    <span class="current">
+                103hrs
+              </span>
+                    <span class="previous">
+                Last month - 128hrs
+              </span>
+                </div>
+            </div>
+        </div>
+        <div class="play-card">
+            <div class="card-body">
+                <div class="title">
+                    Play <span><img src="/images/icon-ellipsis.svg" alt=""></span>
+                </div>
+                <div class="daily active-info">
+                    <span class="current">
+      1hrs
+    </span>
+                    <span class="previous">
+      Yesterday - 2hrs
+    </span>
+                </div>
+                <div class="weekly">
+                    <span class="current">
+            10hrs
+          </span>
+                    <span class="previous">
+            Last week - 8hrs
+          </span>
+                </div>
+                <div class="monthly">
+                    <span class="current">
+            23hrs
+          </span>
+                    <span class="previous">
+            Last month - 29hrs
+          </span>
+                </div>
+            </div>
+        </div>
+        <div class="study-card">
+            <div class="card-body">
+                <div class="title">
+                    Study <span><img src="/images/icon-ellipsis.svg" alt=""></span>
+                </div>
+                <div class="daily active-info">
+                    <span class="current">
+      0hrs
+    </span>
+                    <span class="previous">
+      Yesterday - 1hrs
+    </span>
+                </div>
+                <div class="weekly">
+                    <span class="current">
+            4hrs
+          </span>
+                    <span class="previous">
+            Last week - 7hrs
+          </span>
+                </div>
+                <div class="monthly">
+                    <span class="current">
+            13hrs
+          </span>
+                    <span class="previous">
+            Last month - 19hrs
+          </span>
+                </div>
+            </div>
+        </div>
+        <div class="exercise-card">
+            <div class="card-body">
+                <div class="title">
+                    Exercise <span><img src="/images/icon-ellipsis.svg" alt=""></span>
+                </div>
+                <div class="daily active-info">
+                    <span class="current">
+      1hrs
+    </span>
+                    <span class="previous">
+      Yesterday - 1hrs
+    </span>
+                </div>
+                <div class="weekly">
+                    <span class="current">
+           4hrs
+          </span>
+                    <span class="previous">
+            Last week - 5hrs
+          </span>
+                </div>
+                <div class="monthly">
+                    <span class="current">
+            11hrs
+          </span>
+                    <span class="previous">
+            Last month - 18hrs
+          </span>
+                </div>
+            </div>
+        </div>
+        <div class="social-card">
+            <div class="card-body">
+                <div class="title">
+                    Social <span><img src="/images/icon-ellipsis.svg" alt=""></span>
+                </div>
+                <div class="daily active-info">
+                    <span class="current">
+      1hrs
+    </span>
+                    <span class="previous">
+      Yesterday - 3hrs
+    </span>
+                </div>
+                <div class="weekly">
+                    <span class="current">
+            5hrs
+          </span>
+                    <span class="previous">
+            Last week - 10hrs
+          </span>
+                </div>
+                <div class="monthly">
+                    <span class="current">
+            21hrs
+          </span>
+                    <span class="previous">
+            Last month - 23hrs
+          </span>
+                </div>
+            </div>
+        </div>
+        <div class="selfcare-card">
+            <div class="card-body">
+                <div class="title">
+                    Self Care <span><img src="/images/icon-ellipsis.svg" alt=""></span>
+                </div>
+                <div class="daily active-info">
+                    <span class="current">
+      0hrs
+    </span>
+                    <span class="previous">
+      Yesterday - 1hrs
+    </span>
+                </div>
+                <div class="weekly">
+                    <span class="current">
+            2hrs
+          </span>
+                    <span class="previous">
+            Last week - 2hrs
+          </span>
+                </div>
+                <div class="monthly">
+                    <span class="current">
+            7hrs
+          </span>
+                    <span class="previous">
+            Last month - 11hrs
+          </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">MemeMaster</a>.
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
